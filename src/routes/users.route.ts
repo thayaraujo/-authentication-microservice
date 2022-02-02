@@ -1,4 +1,4 @@
-import { NextFunction, Response, Request, Router } from "express";
+import { NextFunction, Request, Response, Router } from "express";
 import { StatusCodes } from 'http-status-codes';
 
 const usersRoute = Router();
