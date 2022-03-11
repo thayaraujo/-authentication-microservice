@@ -1,4 +1,5 @@
 import express, { NextFunction, Request, Response } from 'express';
+import authorizationRoute from './routes/authorization.route';
 import statusRoute from './routes/status.route';
 import usersRoute from './routes/users.route';
 
@@ -10,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(statusRoute);
 app.use(usersRoute);
+app.use(authorizationRoute);
 
 app.get('/status', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).send({ foo: 'Sucesso' });
